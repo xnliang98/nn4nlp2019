@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)http://www.phontron.com/class/nn4nlp2019/assignments.html -->
+<html class=" desktop" data-blockbyte-bs-uid="108193"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>CS 11-747: Neural Networks for NLP</title>
+	
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<link href="./CS 11-747_ Neural Networks for NLP_files/css" rel="stylesheet" type="text/css">
+	<script src="./CS 11-747_ Neural Networks for NLP_files/jquery.min.js"></script>
+	<style type="text/css">html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}body{-webkit-text-size-adjust:none}</style><style type="text/css">@-ms-viewport{width: device-width}</style><style type="text/css">*,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}</style><style type="text/css">body{min-width:1200px}.container{margin-left:auto;margin-right:auto;width:1200px}.container.small{width:900px}.container.big{width:100%;max-width:1500px;min-width:1200px}</style><style type="text/css">.\31 2u{width:100%}.\31 1u{width:91.6666666667%}.\31 0u{width:83.3333333333%}.\39 u{width:75%}.\38 u{width:66.6666666667%}.\37 u{width:58.3333333333%}.\36 u{width:50%}.\35 u{width:41.6666666667%}.\34 u{width:33.3333333333%}.\33 u{width:25%}.\32 u{width:16.6666666667%}.\31 u{width:8.3333333333%}.\-11u{margin-left:91.6666666667%}.\-10u{margin-left:83.3333333333%}.\-9u{margin-left:75%}.\-8u{margin-left:66.6666666667%}.\-7u{margin-left:58.3333333333%}.\-6u{margin-left:50%}.\-5u{margin-left:41.6666666667%}.\-4u{margin-left:33.3333333333%}.\-3u{margin-left:25%}.\-2u{margin-left:16.6666666667%}.\-1u{margin-left:8.3333333333%}</style><style type="text/css">.row>*{float:left;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}.row:after{content:'';display:block;clear:both;height:0}.row:first-child>*{padding-top:0!important}</style><style type="text/css">.row.flush{margin-left:0}.row.flush>*{padding:0!important}.row>*{padding-left:50px}.row+.row>*{padding:50px 0 0 50px}.row{margin-left:-50px}.row.half>*{padding-left:25px}.row+.row.half>*{padding:25px 0 0 25px}.row.half{margin-left:-25px}.row.quarter>*{padding-left:12.5px}.row+.row.quarter>*{padding:12.5px 0 0 12.5px}.row.quarter{margin-left:-12.5px}.row.oneandhalf>*{padding-left:75px}.row+.row.oneandhalf>*{padding:75px 0 0 75px}.row.oneandhalf{margin-left:-75px}.row.double>*{padding-left:100px}.row+.row.double>*{padding:100px 0 0 100px}.row.double{margin-left:-100px}</style><style type="text/css">.not-desktop{display:none!important}.only-mobile,.only-1000px{display:none!important}</style><link rel="stylesheet" type="text/css" href="./CS 11-747_ Neural Networks for NLP_files/style.css"><link rel="stylesheet" type="text/css" href="./CS 11-747_ Neural Networks for NLP_files/style-desktop.css"><script src="./CS 11-747_ Neural Networks for NLP_files/skel.min.js"></script>
+	<script src="./CS 11-747_ Neural Networks for NLP_files/skel-panels.min.js"></script>
+	<script src="./CS 11-747_ Neural Networks for NLP_files/init.js"></script>
+	<noscript>
+		<link rel="stylesheet" href="/class/nn4nlp2019/assets/css/skel-noscript.css" />
+		<link rel="stylesheet" href="/class/nn4nlp2019/assets/css/style.css" />
+		<link rel="stylesheet" href="/class/nn4nlp2019/assets/css/style-desktop.css" />
+	</noscript>
+<style class="blockbyte-bs-style" data-name="content">body>div#blockbyte-bs-indicator>div{opacity:0;pointer-events:none}body>iframe#blockbyte-bs-sidebar.blockbyte-bs-visible,body>iframe#blockbyte-bs-overlay.blockbyte-bs-visible{opacity:1;pointer-events:auto}body.blockbyte-bs-noscroll{overflow:hidden !important}body>div#blockbyte-bs-indicator>div{position:absolute;transform:translate3d(-40px, 0, 0);top:0;left:0;width:40px !important;height:100%;background:rgba(0,0,0,0.5);border-radius:0 10px 10px 0;transition:opacity 0.3s, transform 0.3s;z-index:2}body>div#blockbyte-bs-indicator>div>span{-webkit-mask:no-repeat center/32px;-webkit-mask-image:url(chrome-extension://jdbnofccmhefkmjbkkdkfiicjkgofkdh/img/icon-bookmark.svg);background-color:#ffffff;position:absolute;display:block;top:0;left:0;width:100%;height:100%}body>div#blockbyte-bs-indicator[data-pos='right']{left:auto;right:0}body>div#blockbyte-bs-indicator[data-pos='right']>div{transform:translate3d(40px, 0, 0);left:auto;right:0;border-radius:10px 0 0 10px}body>div#blockbyte-bs-indicator.blockbyte-bs-fullHeight>div{border-radius:0}body>div#blockbyte-bs-indicator.blockbyte-bs-hover>div{transform:translate3d(0, 0, 0);opacity:1}body>div#blockbyte-bs-indicator[data-pos='left'].blockbyte-bs-has-lsb{height:100% !important;top:0 !important}body>div#blockbyte-bs-indicator[data-pos='left'].blockbyte-bs-has-lsb>div{background:transparent}body>div#blockbyte-bs-indicator[data-pos='left'].blockbyte-bs-has-lsb>div>span{-webkit-mask-position-y:20px}body>iframe#blockbyte-bs-sidebar{width:350px;max-width:none;height:0;z-index:2147483646;background-color:rgba(255,255,255,0.8) !important;border:none;display:block !important;transform:translate3d(-350px, 0, 0);transition:width 0s 0.3s, height 0s 0.3s, opacity 0.3s, transform 0.3s}body>iframe#blockbyte-bs-sidebar[data-pos='right']{left:auto;right:0;transform:translate3d(350px, 0, 0)}body>iframe#blockbyte-bs-sidebar.blockbyte-bs-visible{width:calc(100% + 350px);height:100%;transform:translate3d(0, 0, 0);transition:opacity 0.3s, transform 0.3s}body>iframe#blockbyte-bs-sidebar.blockbyte-bs-hideMask{background:none !important}body>iframe#blockbyte-bs-sidebar.blockbyte-bs-hideMask:not(.blockbyte-bs-hover){width:calc(350px + 50px)}body>iframe#blockbyte-bs-overlay{width:100%;max-width:none;height:100%;z-index:2147483647;border:none;background:rgba(0,0,0,0.5) !important;transition:opacity 0.3s}
+</style></head>
+<body><div id="skel-panels-pageWrapper" style="position: relative; left: 0px; right: 0px; top: 0px; backface-visibility: hidden; transition: -webkit-transform 0.25s ease-in-out 0s;">
+
+	<!-- Header -->
+	<div id="header">
+		<div id="nav-wrapper">
+	<!-- Nav -->
+	<nav id="nav">
+		<ul>
+			
+			<li><a href="http://www.phontron.com/class/nn4nlp2019/index.html">Homepage</a></li>
+			<li><a href="http://www.phontron.com/class/nn4nlp2019/description.html">Description</a></li>
+			<li><a href="http://www.phontron.com/class/nn4nlp2019/assignments.html">Assignments</a></li>
+			<li><a href="http://www.phontron.com/class/nn4nlp2019/schedule.html">Schedule</a></li>
+		</ul>
+	</nav>
+</div>
+
+		<div class="container">
+
+			<!-- Logo -->
+			<div id="logo">
+				<span class="tag">CMU CS 11-747, Spring 2019</span>
+				<h1><a href="http://www.phontron.com/class/nn4nlp2019/assignments.html#">Neural Networks<br>for NLP</a></h1>
+
+			</div>
+		</div>
+	</div>
+	<!-- Header -->
+	<!-- Main -->
+	<div id="main">
+		<div id="content" class="container">
+			<section>
+				<header>
+					<h2>Assignments</h2>
+				</header>
+
+<p>The aim of the assignment and project is to build the skills needed to do build cutting-edge systems or do cutting-edge research, culminating with a project that demonstrates these abilities through a project.</p>
+
+<p><b><u>Read all the instructions on this page carefully</u></b><br>
+You are responsible for reading these instructions and following them carefully. If you do not, you may be marked down as a result.
+</p>
+
+<h3>Assignment Policies</h3>
+
+<p><b>Working in Teams:</b> There are 4 assignments in the class. Assignment 1 <i>must be done individually</i>, while Assignments 2-4 must be done in <i>teams of 2-3</i> (individual submissions will not be accepted for Assignments 2-4). If you are having trouble finding a group, the instructor and TAs will help you find one after the first initial survey.</p>
+
+<p><b>Submission Information:</b> To submit your assignment, send the following to the TA mailing list:
+</p><ul class="bullet">
+<li><b>your names and andrew IDs</b></li>
+<li><b>a report:</b> This should be up to 5 pages for the assignments 1-3, and 9 pages for assignment 4. References are not included in the page count, and it is OK to submit appendices that include supplementary information such as hyperparameter settings or additional output examples, although there is no guarantee that the TAs will read them. Submissions that exceed the page count will be penalized one half grade for each page over (e.g. A to A- or A- to B+). Submit the PDF of the assignment as an attachment to your email. The moment this PDF is delivered to the TA mailing list is the time your assignment is treated as being turned in.</li>
+<li><b>a link to a github repository containing your code:</b> Your github repository <i>must be viewable to the TAs and instructor</i> by the submission deadline. If your repository is private make it accessible to us (github IDs <tt>neubig</tt>, <tt>antonisa</tt>, <tt>jblamare</tt>, <tt>jxhe</tt>, <tt>dbc148</tt>, <tt>MysteryVaibhav</tt>, <tt>violet-zct</tt>, <tt>danishpruthi</tt>). If your repository is not visible to us, your assignment will not be considered complete, so if you are worried please submit well in advance of the deadline so we can confirm the submission is visible.</li>
+</ul>
+<p></p>
+
+<p><b>Late Day Policy:</b>  In case there are unforeseen circumstances that don't let you turn in your assignment on time, 5 late days total over the first three assignments will be allowed (late days may not be applied to the final project, assignment 4). Note that other than these late days, <i>we will not be making exceptions and extending deadlines</i>, so please try to be responsible frugal with your late days and use them only if necessary. Note that the second assignment is harder than the first one, so it'd be a good idea to try to save your late days for the second assignment if possible. Assignments that are late beyond the allowed late days will be graded down one half-grade per day late.</p>
+
+<p><b>Plagiarism/Code Reuse Policy:</b> All assignments are expected to be conducted under the <a href="https://www.cmu.edu/academic-integrity/">CMU policy for academic integrity</a>. All rules here apply and violations will be subject to penalty including zero credit on the assignment, failing the course, or other disciplinary measures. In particular, in your implementation:
+</p><ul class="bullet">
+<li>Pseudo-code provided by the TAs or instructor may be used freely without restriction.</li>
+<li>You may not just re-use an existing implementation written by someone else. The implementation should basically be your own.</li>
+<li>Fragments of code found online can be used (assuming the license so permits), but if they are significant, please cite these <i>in your report</i>. Failure to do so will be treated as being in violation of the assignment rules.</li>
+<li>Code written by other students in the class not in your assignment group cannot be used.</li>
+</ul>
+<p></p>
+
+<p>If you are doing a similar project for a graded class at CMU (including independent studies), you must declare so on your report, and note which parts of the project are for 11-747, and which parts are for the other class. Consult with the TA mailing list if you are unsure.</p>
+
+<p><b>Consulting w/ Instructors/TAs:</b> For assignments and projects, you are free to consult as much as you want, any time you want with the instructors and TAs. That is what we're here for, and in no way is this considered cheating. In fact, if you don't have much experience with neural networks previously, it may be necessary to liberally consult with the instructors and TAs to learn about how to do the implementation and finish the assignments. So please do so.</p>
+
+<p>Because this is a project-based course I assume that many of the students taking the course will be interested in turning their assignments or project into research papers. In this case, if you have received useful advice from the instructor or TAs that made the project significantly better, consider inviting them to be co-authors on the paper. Of course, you do not need to do so just because the paper is a result of the class, only if you feel that their advice or help made a contribution.</p>
+
+
+<h3>Details of Each Assignment</h3>
+
+<h4>Assignment 1: Text Classifier and Initial Interest Survey (Due <font color="red">Survey 2/11, Implementation 2/15</font>)</h4>
+
+<p>The first assignment <i>is to be done individually</i> and will have two components (1) a preliminary survey, and (2) an implementation of a baseline text classifier.</p>
+
+<p><b>Initial Interest Survey:</b> There will be an initial questionnaire regarding what task you are interested in tackling for the final project. If you already have a group then you can specify who will be in your group, but otherwise just write that you are still looking and we'll help introduce others in the class.</p>
+
+<p><b>Implementation Component:</b> You will be asked to implement a text classifier from scratch. Specifically, we have provided training/development/test data in the format "LABEL ||| SENTENCE" directly below, where the labels for the test data are all "UNK". You will need to download the data, train, and calculate the validation accuracy. In addition, please predict the labels for both the development and test sets and turn them in along with your report, one label per line format.</p>
+
+<p><a href="http://phontron.com/data/topicclass-v1.tar.gz">CS 11-747 Assignment 1 Topic Classification data</a></p>
+
+<p>Here implementing ``from scratch'' means that you are not allowed to simply run existing code, nor copy large chunks from an existing implementation of the particular model of interest. This also includes models for pre-training contextualized word representations such as ELMo or BERT. If you want to use pre-training of contextualized word representations, you will have to re-implement it yourself. You are, however, allowed to use pre-trained word embeddings (of any kind you like).</p>
+
+<p>
+The grading rubric is as follows:
+</p><ul class="bullet">
+<li>A+: Exceptional or surprising. Goes far beyond most other submissions.</li>
+<li>A: A complete implementation that achieves competitive results on the provided datasets, and a clear report of what was done.</li>
+<li>A-: A complete implementation but with slightly lower result numbers or a less clear report.</li>
+<li>B+: An implementation and reasonable evaluation numbers exist, but clearly do not match the baseline. Or if the result is clearly lacking detail.</li>
+<li>B or below: Results or report are lacking.</li>
+</ul>
+<p></p>
+
+
+<h4>Assignment 2: Project Proposal and Literature Survey (Due 2/25)</h4>
+
+<p>Assignment 2 is <i>to be done as a group</i> and will involve a proposal of a project topic and a literature survey regarding this topic. In the survey, explain the task that you would like to tackle in concrete terms, and also cover all of the relevant recent research on the topic. Note that you are still allowed to change topics if you think of something different after assignment 2, but you will need to confirm with the instructor first.</p>
+
+<p>The grading rubric for the survey component is as follows:
+</p><ul class="bullet">
+<li>A+: Exceptional or surprising. Goes far beyond most other submissions.</li>
+<li>A: A complete survey that covers all the major relevant papers in the field and has a critical analysis of their strengths, weaknesses, or applicability.</li>
+<li>A-: The survey has a good analysis but is missing a few pieces of relevant related work, or is quite complete but is lacking on critical analysis.</li>
+<li>B+: The survey is either quite lacking in coverage or analysis, or is decent but not complete in both aspects.</li>
+<li>B or B-: The survey is lacking in both coverage and analysis, but does make an attempt to cover some related research.</li>
+<li>C+ or below: Clear lack of effort or incompleteness.</li>
+</ul>
+<p></p>
+
+<h4>Assignment 3: State-of-the-art Reimplementation (Due 3/25)</h4>
+
+<p>
+Checkpoint 2 will involve reproducing the evaluation numbers of a state-of-the-art baseline model for the task of interest with code that you have implemented from scratch. In other words, you must get the same numbers as the previous paper on the same dataset.
+</p>
+
+<p>
+In your report, also perform an analysis of what remaining errors this model makes (ideally with concrete examples of failure cases), and describe how you plan to create a new model for the final project that will address these error cases. If you are interested in tackling a task that does not have a neural baseline in the final project, you may also describe how you adopted the existing model to this new task and perform your error analysis on the new task (although you must report results on the task that the state-of-the-art model was originally designed for).
+</p>
+
+<p>The grading rubric for this checkpoint is as follows:</p>
+<ul class="bullet">
+<li>A+: Exceptional or surprising. Goes far beyond most other submissions.</li>
+<li>A: A complete re-implementation that meets or exceeds the state of the art. An analysis of the results, and forward-looking plans for further development.</li>
+<li>A-: Similarly, a complete re-implementation with competitive result numbers, but less analysis or forward-looking plans for development than assignments rewarded an A.</li>
+<li>B+: An implementation and evaluation numbers exist, but they do not match previous work in the field. Or the analysis or forward-looking plans may be seriously lacking.</li>
+<li>B or B-: Two or more of the above three elements are lacking.</li>
+<li>C+ or below: Clear lack of effort or incompleteness.</li>
+</ul>
+
+<h4>Assignment 4: Final Project (Due 5/7)</h4>
+
+<p>
+The final project work will be expected to be a novel research contribution that either (1) introduces new techniques for one of the existing tasks in the assignment using a significant amount of technical sophistication utilizing one of the more advanced techniques introduced in the class, or (2) tackles a new NLP task with a neural network model that is motivated by the unique problems posed by the application domain. The grading rubric is as follows:
+</p>
+
+<ul class="bullet">
+<li>A+: Exceptional or surprising. Goes far beyond most other submissions.</li>
+<li>A: A respectable research contribution that is novel and effective, and could be submitted largely as-is as a paper to an academic conference.</li>
+<li>A-: A respectable research contribution that has some small incomplete parts, but is largely complete and promising.</li>
+<li>B+: An idea that is novel, but the results may not be there yet, or the analysis is short.</li>
+<li>B or B-: Results, analysis, or novelty are lacking.</li>
+<li>C+ or below: Clear lack of effort or incompleteness.</li>
+</ul>
+
+<h3>Example Tasks</h3>
+
+<p>Below is a list of suggested NLP tasks that you may use for your assignments and projects. It is completely fine, and highly encouraged, to tackle other tasks, but you must confirm with the instructor/TAs in the initial questionnaire (or if you decide to change after the questionnaire, please send us an email).</p>
+
+<ul class="bullet">
+<li><a href="http://universaldependencies.org/conll18/">Shared Task on Universal Dependency Parsing</a></li>
+<li><a href="https://sigmorphon.github.io/sharedtasks/2018/">Shared Task on Universal Morphological Reinflection</a></li>
+<li><a href="http://alt.qcri.org/semeval2018/index.php?id=tasks">Any SemEval Task</a></li>
+<li><a href="https://gluebenchmark.com/">Any GLUE Benchmark Task</a></li>
+<li><a href="https://conala-corpus.github.io/">Code Generation on CoNaLa</a></li>
+<li><a href="http://www.nyu.edu/projects/bowman/xnli/">Cross-lingual Natural Language Inference on XNLI</a></li>
+<li><a href="http://www.cs.cmu.edu/~pmichel1/mtnt/">Machine Translation of Noisy Text on MTNT</a></li>
+<li><a href="https://quac.ai/">Question Answering in Context on QuAC</a></li>
+<li><a href="http://www.zhuhao.me/fewrel/">Few-shot Relation Extraction on FewRel</a></li>
+<li><a href="https://github.com/facebookresearch/MUSE">Bilingual Lexicon Induction on MUSE</a></li>
+<li><a href="https://github.com/raosudha89/GYAFC-corpus">Formality Style Transfer on GYAFC</a></li>
+<li><a href="https://sig-edu.org/bea/current">Grammatical Error Correction</a></li>
+</ul>
+
+
+			</section>
+		</div>
+	</div>
+
+
+
+<!-- Footer -->
+<div id="footer">
+	<div class="container">
+		<section>
+			<header>
+				<h2>Get in touch</h2>
+				<span class="byline">Via mail, piazza, or twitter.</span>
+			</header>
+			<ul class="contact">
+				<li><a href="mailto:cs11-747-sp2019-tas-at-cs.cmu.edu" class="fa fa-envelope-o"><span>Mail</span></a></li>
+				<li><a href="http://piazza.com/cmu/spring2019/cs11747/home" class="fa fa-university"><span>Piazza</span></a></li>
+			</ul>
+		</section>
+	</div>
+</div>
+
+<!-- Copyright -->
+<div id="copyright">
+	<div class="container">
+		Site Content: <a href="http://phontron.com/">Graham Neubig</a>, Site Design: <a href="http://templated.co/">TEMPLATED</a>, Jekyll Template: <a href="http://cloudcannon.com/">Cloud Cannon</a>
+	</div>
+</div>
+
+
+
+</div><div id="skel-panels-defaultWrapper" style="height: 100%;"></div><div id="skel-panels-fixedWrapper" style="position: relative;"></div><iframe id="blockbyte-bs-sidebar" class="notranslate" data-pos="left" src="./CS 11-747_ Neural Networks for NLP_files/saved_resource.html"></iframe><div id="blockbyte-bs-indicator" class="blockbyte-bs-fullHeight blockbyte-bs-visible" data-pos="left" style="width: 2px; height: 100%; top: 0%;"><div><span></span></div></div></body></html>
