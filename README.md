@@ -3,3 +3,7 @@ Neural Network for Natural Language Processing 2019, CMU CS 11-747, [course home
 
 Data and original code can be get from https://github.com/neubig/nn4nlp-code
 
+YouTube:https://www.youtube.com/watch?v=pmcXgNTuHnk&list=PL8PYTP1V4I8Ajj7sY6sdtmjgkt7eo2VMs
+
+BiliBili:https://www.bilibili.com/video/av40929856
+
