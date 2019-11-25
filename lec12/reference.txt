@@ -1,0 +1,4 @@
+http://karpathy.github.io/2016/05/31/rl/
+http://ufal.mff.cuni.cz/~straka/courses/npfl114/2016/sutton-bookdraft2016sep.pdf
+http://www.dtic.mil/docs/citations/ADA261434
+http://papers.nips.cc/paper/6383-unifying-count-based-exploration-and-intrinsic-motivation.pdf
