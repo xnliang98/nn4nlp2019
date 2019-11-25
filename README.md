@@ -7,4 +7,7 @@ YouTube:https://www.youtube.com/watch?v=pmcXgNTuHnk&list=PL8PYTP1V4I8Ajj7sY6sdtm
 
 BiliBili:https://www.bilibili.com/video/av40929856
 
-B
+# Download
+
+Google Drive: https://drive.google.com/open?id=1gZNWfxg4JW1SVP2GZN4_wqll4zjf5r3M
+
